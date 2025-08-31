@@ -1,97 +1,161 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+:root {
+  --primary: #2ecc71;
+  --secondary: #27ae60;
+  --light: #f4f4f4;
+  --dark: #333;
+}
+
+/* Hero */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../assets/img/hero.jpg") center/cover;
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("https://images.unsplash.com/photo-1571019613914-85f342c1d4b1?w=1500") center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
 }
 .hero h1 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 .hero p {
-    margin: 15px 0;
+  margin: 15px 0;
+  font-size: 1.2rem;
 }
 .btn {
-    background: var(--primary-color);
-    padding: 12px 20px;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+  display: inline-block;
+  background: var(--primary);
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: var(--secondary);
 }
 
-
+/* Container padrão flex */
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-.card {
-    background: var(--light-gray);
-    padding: 20px;
-    border-radius: 10px;
-    flex: 1 1 250px;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 20px;
 }
 
+/* Sobre */
 .sobre img {
-    width: 250px;
-    border-radius: 10px;
+  width: 300px;
+  border-radius: 10px;
+}
+.sobre .texto {
+  max-width: 400px;
+  text-align: justify;
 }
 
+/* Serviços */
+.servicos {
+  background: var(--light);
+  padding: 40px 20px;
+  text-align: center;
+}
+.servicos h2 {
+  margin-bottom: 20px;
+}
+.servicos .card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 250px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
 
+/* Benefícios */
+.beneficios {
+  padding: 40px 20px;
+  text-align: center;
+}
 .beneficios ul {
-    list-style: none;
-    max-width: 500px;
-    margin: auto;
+  list-style: none;
+  margin-top: 20px;
 }
 .beneficios li {
-    margin: 10px 0;
-    font-size: 1.1rem;
+  margin: 10px 0;
+  font-size: 1.1rem;
 }
 
-
+/* Depoimentos */
+.depoimentos {
+  background: var(--light);
+  padding: 40px 20px;
+  text-align: center;
+}
+.depoimentos .card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 250px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
 .depoimentos img {
-    width: 80px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
+/* Contato */
+.contato {
+  padding: 40px 20px;
+  text-align: center;
+}
 .contato form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: auto;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+  gap: 15px;
 }
 .contato input, .contato textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 .contato button {
-    background: var(--primary-color);
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  background: var(--primary);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.contato button:hover {
+  background: var(--secondary);
 }
 
-
+/* Rodapé */
 footer {
-    background: var(--secondary-color);
-    color: white;
-    text-align: center;
-    padding: 20px;
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .hero h1 {
-        font-size: 2rem;
-    }
+  .sobre .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
 }
