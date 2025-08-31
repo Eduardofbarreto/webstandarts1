@@ -1,0 +1,97 @@
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../assets/img/hero.jpg") center/cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+.hero h1 {
+    font-size: 2.5rem;
+}
+.hero p {
+    margin: 15px 0;
+}
+.btn {
+    background: var(--primary-color);
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.card {
+    background: var(--light-gray);
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 250px;
+    text-align: center;
+}
+
+.sobre img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+
+.beneficios ul {
+    list-style: none;
+    max-width: 500px;
+    margin: auto;
+}
+.beneficios li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+
+.depoimentos img {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.contato form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+    gap: 15px;
+}
+.contato input, .contato textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contato button {
+    background: var(--primary-color);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+footer {
+    background: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
